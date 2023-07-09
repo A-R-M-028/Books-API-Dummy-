@@ -3,3 +3,6 @@
 package-lock.json
 
 .env
+
+# If these files are pushed
+# git rm -r --cached .
