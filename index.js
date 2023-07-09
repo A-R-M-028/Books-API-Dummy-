@@ -1,5 +1,8 @@
 //       *******************Here it is book management project********************
+require('dotenv').config();
+// console.log(process.env);
 const express = require("express"); // Import express npm i express first
+const mongoose = require("mongoose"); // Connect to db
 const database = require("./database"); //Import database.js
 const bodyParser = require("body-parser"); // For POST request
 
@@ -7,6 +10,30 @@ const bodyParser = require("body-parser"); // For POST request
 const booky = express();
 booky.use(bodyParser.urlencoded({ extended: true })); // Parse the package or encode und. format
 booky.use(bodyParser.json()); //Everrything as json
+
+/*
+                                  Database -> Mongodb
+  await mongoose
+  .connect("mongodb://your_mongodb_url")
+  .then(() => console.log("Connected"));
+  const mongoose = require('mongoose');
+*/
+
+// Url is moved to <.env> file
+
+// Replace <password> and test(DB_name) with the actual password for your MongoDB Atlas cluster
+// Use env var for security reason of that link -> use it top most line
+
+mongoose.connect(process.env.mongodbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB');
+    // Perform any further operations or start your application logic here
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
+
+
 
 //                                        GET REQUEST
 /*
