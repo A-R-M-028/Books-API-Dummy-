@@ -6,3 +6,9 @@ package-lock.json
 
 # If these files are pushed
 # git rm -r --cached .
+# Again pushed 
+# To delete that commit
+# git log
+# git rebase -i <commit_hash>^
+# git push origin <branch_name> --force
+

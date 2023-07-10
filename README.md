@@ -56,3 +56,16 @@ Update book details if author is changed
 1. Delete a book
 2. Delete author from a book
 3. Delete author from book and releted book from author
+
+
+##                                     MONGODB
+<!-- 
+Schema -> Blueprint of how data has to be constructed, not actual data (In js file not in mongodb) -> Key: Data type
+You cant use schema directly only can passed by model
+MongoDB is Schema less
+Mongoose has schema 
+mongoose -> Validation Purpose, relationship with other data
+Model -> Documentation model of object or database or mongodb
+Workflow -> Schema - Model - Use them
+Collection -> Database
+-->
